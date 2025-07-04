@@ -104,4 +104,16 @@ if par(numero_para_testar)
 else
   puts "O número #{numero_para_testar} é ímpar"
 end
+
+DESAFIO FINAL
+
+def calcularpfinal(preco_original, desconto_percentual)
+ desconto_percentual = desconto_percentual.to_f / 100
+ preco_final =  preco_original -  preco_original * desconto_percentual 
+ end
+ 
+ final = calcularpfinal(1500, 10)
+ 
+ puts final
+ 
 ```
