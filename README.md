@@ -33,4 +33,27 @@ def saudar(nome, idade)
 end
 
 saudar(nome, idade)
+
+
+puts "Qual a sua idade?"
+idade = gets.chomp.to_i
+
+def verificar_idade(idade)
+  if idade < 0
+    puts "Rapaz, tá no útero é?"
+  elsif idade <= 3
+    puts "Quer mamadeira, pirralho!"
+  elsif idade <= 13
+    puts "Criança, kkk!"
+  elsif idade <= 18
+    puts "Adolescente brabo!"
+  elsif idade <= 37
+    puts "Adulto!"
+  else
+    puts "Velhão!"
+  end
+end
+
+verificar_idade(idade)
+    
 ```
