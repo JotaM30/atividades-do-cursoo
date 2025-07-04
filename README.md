@@ -83,5 +83,13 @@ end
 
 area = calcular_area_retangulo(base, altura)
 puts "A área do retângulo é: #{area}"
-    
+
+def formatar_maiuscula(texto)
+    texto.upcase
+end
+nome_original = "JotaM"
+nome_formatado = formatar_maiuscula(nome_original)
+
+puts "O nome original é: #{nome_original}"
+puts "O nome formatado é: #{nome_formatado}"    
 ```
