@@ -71,4 +71,17 @@ puts "Digite um número para a tabuada:"
 numero_do_usuario = gets.chomp.to_i
 
 mostrar_tabuada(numero_do_usuario)
+Atividade 3
+puts "Diga a base do retangulo"
+base = gets.chomp.to_i
+puts "Diga a altura do retangulo"
+altura = gets.chomp.to_i
+
+def calcular_area_retangulo(base, altura)
+  base * altura
+end
+
+area = calcular_area_retangulo(base, altura)
+puts "A área do retângulo é: #{area}"
+    
 ```
