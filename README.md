@@ -55,5 +55,20 @@ def verificar_idade(idade)
 end
 
 verificar_idade(idade)
-    
+
+
+
+def mostrar_tabuada(numero_da_tabuada)
+  i = 1
+  while i <= 10
+    resultado = numero_da_tabuada * i
+    puts "#{numero_da_tabuada} x #{i} = #{resultado}"
+    i += 1
+  end
+end
+
+puts "Digite um número para a tabuada:"
+numero_do_usuario = gets.chomp.to_i
+
+mostrar_tabuada(numero_do_usuario)
 ```
