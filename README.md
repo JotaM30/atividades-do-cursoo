@@ -92,4 +92,16 @@ nome_formatado = formatar_maiuscula(nome_original)
 
 puts "O nome original é: #{nome_original}"
 puts "O nome formatado é: #{nome_formatado}"    
+
+def par(numero)
+  numero % 2 == 0
+end
+
+numero_para_testar = 0
+
+if par(numero_para_testar)
+  puts "O número #{numero_para_testar} é par"
+else
+  puts "O número #{numero_para_testar} é ímpar"
+end
 ```
