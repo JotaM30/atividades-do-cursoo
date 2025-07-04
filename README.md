@@ -13,7 +13,7 @@ puts "Jota M"
 mostrar_linha
 puts "Mais conhecido como João Miguel"
 
-Atividade 2 
+Atividade 1.1 
 def mostrar_menu
     puts "Login"
     puts "Configurações"
@@ -21,4 +21,16 @@ def mostrar_menu
 end
 
 mostrar_menu
+
+Atividade 2
+puts "Diga seu nome"
+nome = gets.chomp
+puts "Diga sua idade"
+idade = gets.chomp
+
+def saudar(nome, idade)
+  puts "Olá, #{nome}, de acordo com as suas informações você tem #{idade} anos."
+end
+
+saudar(nome, idade)
 ```
