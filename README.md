@@ -195,4 +195,22 @@ retangulo = Retangulo.new("Honda Civic", "Prata")
 
 retangulo.ligar
 
+
+DESAFIO FINAL
+class Produto
+  def initialize(nome, preco)
+    @nome = nome
+    @preco = preco
+  end
+
+  def aplicar_desconto(percentual)
+    desconto = @preco * (percentual / 100.0)
+    @preco -= desconto
+    puts "Novo preço de #{@nome} após o desconto de #{percentual}%: R$#{@preco.round(2)}"
+  end
+end
+
+produto = Produto.new("Camiseta", 50)
+produto.aplicar_desconto(20)
+
 ```
