@@ -156,4 +156,23 @@ retangulo = Retangulo.new(4, 3)
 
 
 retangulo.mostrar
+
+
+class Retangulo
+  def initialize(nome_titular, saldo_inicial)
+    @titular = nome_titular
+    @saldo = saldo_inicial
+  end
+
+  def mostrar
+    puts "Seu nome é #{@titular} seu saldo é é #{@saldo}"
+  end
+end
+
+
+retangulo = Retangulo.new("Joao", 300)
+
+
+retangulo.mostrar
+
 ```
