@@ -117,3 +117,43 @@ def calcularpfinal(preco_original, desconto_percentual)
  puts final
  
 ```
+
+```rb
+Atividades 07/07/2025
+class Aluno
+  def initialize(nome, matricula)
+    @nome = nome
+    @matricula = matricula
+  end
+
+  def exibir
+    puts "#{@nome} - Matrícula: #{@matricula}"
+  end
+end
+
+# Criando os alunos diretamente
+joao = Aluno.new("João", "123")
+ana = Aluno.new("Ana", "456")
+
+# Exibindo os alunos
+joao.exibir
+ana.exibir
+
+
+class Retangulo
+  def initialize(base, altura)
+    @base = base
+    @altura = altura
+  end
+
+  def mostrar
+    puts "Base é #{@base} e altura é #{@altura}"
+  end
+end
+
+
+retangulo = Retangulo.new(4, 3)
+
+
+retangulo.mostrar
+```
