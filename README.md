@@ -175,4 +175,24 @@ retangulo = Retangulo.new("Joao", 300)
 
 retangulo.mostrar
 
+
+
+class Retangulo
+  def initialize(modelo, cor)
+    @modelo = modelo
+    @cor = cor
+  @ligado = false
+  end
+
+  def ligar
+    puts "#{@modelo} ta ligado!"
+  end
+end
+
+
+retangulo = Retangulo.new("Honda Civic", "Prata")
+
+
+retangulo.ligar
+
 ```
