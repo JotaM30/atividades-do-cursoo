@@ -254,7 +254,7 @@ puts "Seu nome era: #{aluno.nome}"
 aluno.nome = "Miguel"
 puts "Agora é: #{aluno.nome}"
 
-Exercício 3.2
+Exercício 3.2 e 3.3
 class Guerreiro
   attr_accessor :nome, :vida
 
@@ -273,5 +273,26 @@ puts "Vida inicial: #{guerreiro.vida}"
 
 guerreiro.receber_dano(20)
 puts "Vida após dano: #{guerreiro.vida}"
+
+
+
+class Guerreiro
+  attr_accessor :nome, :pontuacao
+
+  def initialize(n, p)
+    @nome = n
+    @pontuacao = p
+  end
+
+  def receber_pontos(pontos)
+    @pontuacao += pontos
+  end
+end
+
+guerreiro = Guerreiro.new("Buzz", 0)
+puts "Pontos iniciais: #{guerreiro.pontuacao}"
+
+guerreiro.receber_pontos(20)
+puts "Pontos agora: #{guerreiro.pontuacao}"
 
 ```
