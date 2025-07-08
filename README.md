@@ -214,3 +214,64 @@ produto = Produto.new("Camiseta", 50)
 produto.aplicar_desconto(20)
 
 ```
+
+
+```rb
+Atividades do dia 08/07/2025
+Exercício 1.1
+class Livro
+  def initialize(t, a)
+    @titulo = t
+    @autor = a
+  end
+
+  def titulo
+    @titulo
+  end
+end
+
+Exercício 1.3
+class Livro
+  attr_reader :titulo, :autor
+
+  def initialize(t, a)
+    @titulo = t
+    @autor = a
+  end
+end
+
+Exercício 2.1
+class Aluno
+  attr_accessor :nome
+
+  def initialize(nome)
+    @nome = nome
+  end
+end
+
+aluno = Aluno.new("Jota")
+puts "Seu nome era: #{aluno.nome}"
+aluno.nome = "Miguel"
+puts "Agora é: #{aluno.nome}"
+
+Exercício 3.2
+class Guerreiro
+  attr_accessor :nome, :vida
+
+  def initialize(n, v)
+    @nome = n
+    @vida = v
+  end
+
+  def receber_dano(dano)
+    @vida -= dano
+  end
+end
+
+guerreiro = Guerreiro.new("Thor", 100)
+puts "Vida inicial: #{guerreiro.vida}"
+
+guerreiro.receber_dano(20)
+puts "Vida após dano: #{guerreiro.vida}"
+
+```
