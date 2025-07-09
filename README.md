@@ -375,4 +375,37 @@ Desafio 3:
     puts "O elevador está no andar #{@andar_atual} de #{@andar_maximo}."
   end
 end
+
+
+Desafio 4
+class ContaBancaria
+ attr_reader :titular, :saldo
+ def initialize(titular, saldo_inicial)
+ @titular = titular
+ @saldo = saldo_inicial
+ @extrato = []
+ end
+
+ def depositar(valor)
+    depositar +=valor
+    @extrato << {tipo: "saque", valor: valor}
+ end
+ def saque(valor)
+   if @saldo >= valor
+    sacar -=valor
+    @extrato << {tipo: "saque", valor: valor}
+   end
+end
+def imprimir_extrato
+    puts "Extrato: #{@titular}"
+    extrato.each do |transacao|
+        puts "#{transacao[:tipo].capitalize}: R$ #{'%.2f' % transacao[:valor]}"
+ end
+ puts "--- Saldo Final: R$ #{'%.2f' % @saldo} ---"
+end
+end
+conta = ContaBancaria.new("Alisson", 900)
+conta.depositar(400)
+conta.sacar(350)
+conta.imprimir_extrato
 ```
