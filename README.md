@@ -296,3 +296,50 @@ guerreiro.receber_pontos(20)
 puts "Pontos agora: #{guerreiro.pontuacao}"
 
 ```
+
+
+```rb
+Atividades do dia 09/02/2025
+Desafio 1: 
+
+  def descrever
+    "O livro '#{@titulo}' de #{@autor} tem #{@numero_paginas} páginas."
+  end
+end
+
+livro = Livro.new("Diário de um Banana 2", "Jeff Kinney", 224)
+puts livro.descrever
+Desafio 2:
+class Retangulo
+  def initialize(base, altura)
+    @base = base
+    @altura = altura
+  end
+
+  def calcular_area
+    @base * @altura
+  end
+
+  def calcular_perimetro
+    2 * (@base + @altura)
+  end
+
+  def formatar_maiuscula(texto)
+    texto.upcase
+  end
+end
+
+puts "Diga a base do retângulo"
+base = gets.chomp.to_i
+puts "Diga a altura do retângulo"
+altura = gets.chomp.to_i
+
+retangulo = Retangulo.new(base, altura)
+
+area = retangulo.calcular_area
+perimetro = retangulo.calcular_perimetro
+
+puts "A área do retângulo é: #{retangulo.formatar_maiuscula(area.to_s)}"
+puts "O perímetro do retângulo é: #{retangulo.formatar_maiuscula(perimetro.to_s)}"
+
+```
