@@ -342,4 +342,37 @@ perimetro = retangulo.calcular_perimetro
 puts "A área do retângulo é: #{retangulo.formatar_maiuscula(area.to_s)}"
 puts "O perímetro do retângulo é: #{retangulo.formatar_maiuscula(perimetro.to_s)}"
 
+
+
+Desafio 3: 
+        class Elevador
+  attr_accessor :andar_maximo, :andar_atual
+
+  def initialize(andar_maximo)
+    @andar_maximo = andar_maximo
+    @andar_atual = 0  # O elevador começa no térreo
+  end
+
+  def subir
+    if @andar_atual < @andar_maximo
+      @andar_atual += 1
+      puts "Subindo, O elevador está no andar #{@andar_atual}."
+    else
+      puts "Você já está no andar máximo (#{@andar_maximo})."
+    end
+  end
+
+  def descer
+    if @andar_atual > 0
+      @andar_atual -= 1
+      puts "Descendo, O elevador está no andar #{@andar_atual}."
+    else
+      puts "O elevador já está no térreo (andar 0)."
+    end
+  end
+
+  def status
+    puts "O elevador está no andar #{@andar_atual} de #{@andar_maximo}."
+  end
+end
 ```
