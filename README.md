@@ -413,6 +413,7 @@ conta.imprimir_extrato
 
 ```rb
 Atividades do dia 10/07/2025
+Exercício 1
 class Animal
   attr_reader :nome, :tipo
 
@@ -426,7 +427,69 @@ class Animal
   end
 end
 class Gato < Animal
+Exercício
 end
 meu_gato = Gato.new("Kvaratskhelia", "Gato")
 meu_gato.dormir
+
+Exercício 2
+class Funcionario
+  attr_reader :nome, :salario
+
+  def initialize(nome, salario)
+    @nome = nome
+    @salario = salario
+  end
+end
+
+class Gerente < Funcionario
+  attr_reader :bonus
+  
+  def initialize(nome)
+    super(nome, 5000)
+    @bonus = 0
+  end
+
+  def detalhes
+    puts "Seu nome é #{@nome} e você tem um salário inicial de #{@salario}."
+  end
+end
+
+gerente = Gerente.new("Felipinho")
+gerente.detalhes
+Exercício 3
+class Animal
+  attr_reader :nome, :tipo
+
+  def initialize(nome, tipo)
+    @nome = nome
+    @tipo = tipo
+  end
+
+  def falar
+    puts "O animal faz um som."
+  end
+
+  def dormir
+    puts "#{@nome} está dormindo."
+  end
+end
+
+class Gato < Animal
+end
+
+class Cachorro < Animal
+  def falar
+    puts "Au Au, dogzao mau"
+  end
+end
+
+meu_gato = Gato.new("Kvaratskhelia", "Gato")
+meu_gato.dormir
+
+animal = Animal.new("Animal genérico", "Desconhecido")
+animal.falar
+
+cachorro = Cachorro.new("Rex", "Cachorro")
+cachorro.falar
 
