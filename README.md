@@ -482,7 +482,75 @@ end
 
 gerente = Gerente.new("Felipinho")
 gerente.detalhes
+exercício 4
+class 
+    def falar
+        puts "Esse animal emite um som"
+    end
+end
+class Cachorro < Animal 
+    def falar
+        puts "Au Au!"
+    end
+end
+class Gato < Animal
+    def falar
+        puts "Miau!"
+    end
+end
 
-cachorro = Cachorro.new("Rex", "Cachorro")
+animal = Animal.new
+animal.falar
+cachorro = Cachorro.new
 cachorro.falar
+gato = Gato.new
+gato.falar
+
+Exercício final
+class Funcionario
+  attr_reader :nome, :salario
+
+  def initialize(nome, salario_base)
+    @nome = nome
+    @salario = salario_base
+  end
+
+  def calcular_salario
+    @salario
+  end
+end
+
+class Gerente < Funcionario
+  def initialize(nome, salario_base, bonus)
+    super(nome, salario_base)
+    @bonus = bonus
+  end
+
+  def calcular_salario
+    @salario + @bonus
+  end    
+end
+
+class Vendedor < Funcionario
+  def initialize(nome, salario_base)
+    super(nome, salario_base)
+    @comissao = 0
+  end
+
+  def add_comissao(qtd)
+    @comissao += qtd * 100
+  end
+
+  def calcular_salario
+    @salario + @comissao
+  end
+end
+
+funcionario = Funcionario.new("Carlos", 1500)
+gerente = Gerente.new("Ana", 5000, 1000)
+vendedor = Vendedor.new("Lucas", 2000)
+vendedor.add_comissao(3)
+
+
+```
 
