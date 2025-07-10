@@ -458,37 +458,30 @@ end
 gerente = Gerente.new("Felipinho")
 gerente.detalhes
 Exercício 3
-class Animal
-  attr_reader :nome, :tipo
+class Funcionario
+  attr_reader :nome, :salario
 
-  def initialize(nome, tipo)
+  def initialize(nome, salario)
     @nome = nome
-    @tipo = tipo
-  end
-
-  def falar
-    puts "O animal faz um som."
-  end
-
-  def dormir
-    puts "#{@nome} está dormindo."
+    @salario = salario
   end
 end
 
-class Gato < Animal
-end
+class Gerente < Funcionario
+  attr_reader :bonus
+  
+  def initialize(nome)
+    super(nome, 5000)
+    @bonus = 0
+  end
 
-class Cachorro < Animal
-  def falar
-    puts "Au Au, dogzao mau"
+  def detalhes
+    puts "Seu nome é #{@nome} e você tem um salário inicial de #{@salario}."
   end
 end
 
-meu_gato = Gato.new("Kvaratskhelia", "Gato")
-meu_gato.dormir
-
-animal = Animal.new("Animal genérico", "Desconhecido")
-animal.falar
+gerente = Gerente.new("Felipinho")
+gerente.detalhes
 
 cachorro = Cachorro.new("Rex", "Cachorro")
 cachorro.falar
