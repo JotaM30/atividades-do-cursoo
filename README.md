@@ -409,3 +409,24 @@ conta.depositar(400)
 conta.sacar(350)
 conta.imprimir_extrato
 ```
+
+
+```rb
+Atividades do dia 10/07/2025
+class Animal
+  attr_reader :nome, :tipo
+
+  def initialize(nome, tipo)
+    @nome = nome
+    @tipo = tipo
+  end
+
+  def dormir
+    puts "zzzz"
+  end
+end
+class Gato < Animal
+end
+meu_gato = Gato.new("Kvaratskhelia", "Gato")
+meu_gato.dormir
+
